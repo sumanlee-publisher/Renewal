@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+  }
+  body {
+   height: 5000px;
+  }
+  .header-container {
+   margin: 0 auto;
+   width: 1200px;
+   height: 500px; /*임시*/ 
+   align-items: center;
+   background-color: red;
+   /* margin: 48px 0; */
+  }
+  .section-container {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   gap: 16px;
+   margin: 200px 0;
+
+  }
+  
+  .section-container:nth-child(1) {
+   position: absolute;
+   transform: translateX(0%);
+   animation: section-move 1s  1s   both;
+  }
+
+  @keyframes section-move {
+   from {
+    transform: translateX(0%);
+   }
+   to {
+    transform: translateX(50%);
+   }
+  }
+
+  .slide-content {
+   width: 730px;
+   height: 400px;
+   background-color: green;
+   margin: 0 auto;
+   padding: 32px;
+   box-sizing: border-box;
+  }
+ </style>
+</head>
+<body>
+ <header class="header-container">
+  <h1>size</h1>
+  <h2>size</h2>
+  <h3>size</h3>
+  <h4>size</h4>
+ </header>
+ <section class="section-container">
+  <div class="slide-content">content-1</div>
+  <div class="slide-content">content-2</div>
+  <div class="slide-content">content-3</div>
+ </section>
+</body>
+</html>
