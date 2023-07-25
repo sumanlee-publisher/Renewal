@@ -37,15 +37,37 @@ window.addEventListener("scroll", () => {
 const hambergerButton = document.querySelector(".hamberger");
 const hambergerClick = document.querySelector(".hamberger-click");
 const hambergerNav = document.querySelector(".hamberger-nav");
+const hambergerTransition = 500;
 
 
- 
 hambergerButton.addEventListener("click", () => {
-  
-  hambergerButton.classList.add("active");
-  hambergerClick.classList.add("active");
+ if(hambergerButton.classList.contains('active')) {
+  closeHamberger(hambergerTransition);
+ } else {
+  openHamberger();
+ }
+})
 
-  setTimeout(() => {
-    hambergerNav.style.transform = 'none';
-  }, 1); 
- });
+window.addEventListener('scroll', ()=> {
+ if(hambergerButton.classList.contains('active'))
+  closeHamberger();
+})
+
+hambergerNav.style.transition = `${hambergerTransition}ms`
+
+function openHamberger() {
+ hambergerButton.classList.add('active');
+ hambergerClick.classList.add('active');
+ setTimeout(() => {
+  hambergerNav.style.transform = `none`
+  
+ }, 1);
+}
+
+function closeHamberger(transition) {
+ hambergerButton.classList.remove('active');
+ hambergerNav.style.transform = `translateX(100%)`;
+ setTimeout(() => {
+  hambergerClick.classList.remove('active');
+ }, transition);
+}
