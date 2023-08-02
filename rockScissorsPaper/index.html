@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+  }
+
+  button {
+   background-color: transparent;
+   border: 1px solid #aaa;
+   width: 100px;
+   height: 100px;
+   background-image: url(/images_frenchkebab_post_a6187026-8f2d-47d9-8177-413e3c350e70_rsp.png);
+   background-size: auto 80%;
+   background-repeat: no-repeat;
+   box-sizing: border-box;
+   background-position: 9999px;
+  }
+
+  button:active {
+   outline: 4px solid #666;
+  }
+
+  .game-container {
+   width: 500px;
+   border: 1px solid #888;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+
+  .rock-btn {
+   background-position: 20px;
+  }
+  .scissors-btn {
+   background-position: -66px;
+  }
+  .paper-btn {
+   background-position: -152px;
+  }
+ </style>
+</head>
+<body>
+ <div class="game-container">
+  <h1>Game</h1>
+  <div class="button-container">
+   <button class="rock-btn" id="rock"></button>
+   <button class="scissors-btn" id="scissors"></button>
+   <button class="paper-btn" id="paper"></button>
+  </div>
+  <div class="computrer-container">
+   <p>computer selection</p>
+   <button class="computer-btn"></button>
+  </div>
+  <p id="result">Result</p>
+ </div>
+
+ 
+ <script>
+  const rock = document.getElementById('rock');
+  const scissors = document.getElementById('scissors');
+  const paper = document.getElementById('paper');
+
+  const computerButton = document.querySelector(".computer-container > button");
+  const result = document.getElementById("result");
+
+  let computer;
+
+  rock.addEventListener('click', ()=> {
+   rockScissorsPaper(0);
+  })
+  scissors.addEventListener('click', ()=> {
+   rockScissorsPaper(1);
+  })
+  paper.addEventListener('click', ()=> {
+   rockScissorsPaper(2);
+  })
+
+  function rockScissorsPaper(userChoice) {
+   turnOfTheComputer();
+   if(computer === userChoice) {
+    result.innerText = 'Draw🤨';
+   } else if((computer === 1 && userChoice === 0) || (computer === 2 && userChoice === 1) || (computer === 0 && userChoice === 2)) {
+    result.innerText = 'Lose😞';
+   } else {
+    result.innerText = 'Win😆';
+   }
+  }
+
+  function turnOfTheComputer() {
+   computer = Math.floor(Math.random() * 3);
+   buttonReset();
+   if(computer === 0) {
+    computerButton.classList.add('rock-btn');
+   } else if(computer === 1) {
+    computerButton.classList.add('scissors-btn');
+   } else {
+    computerButton.classList.add('paper-btn');
+   }
+  }
+
+  function buttonReset() {
+   computerButton.classList.remove('rock-btn');
+   computerButton.classList.remove('scissors-btn');
+   computerButton.classList.remove('paper-btn');
+  }
+ </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* header-section */
+/* header a {
+ text-decoration: none;
+ color: black;
+}
+
+header {
+ position: absolute;
+ top: 0;
+ z-index: 1;
+}
+
+.header-container {
+ display: flex;
+ font-weight: bold;
+ cursor: pointer;
+ justify-content: space-between;
+ border: 1px solid;
+}
+
+.sub-content {
+ display: none;
+} */
+
+
+
+/* 헤더 전체 영역 */
+.header-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 80px;
+ margin: 0 auto;
+ position: relative;
+}
+
+/* head-menu 영역 */
+.head-menu {
+ display: flex;
+ justify-content: space-between;
+}
+
+.company-intro {
+ padding: 40px;
+ cursor: pointer;
+ color: white;
+}
+
+.second-menu {
+ display: none;
+ margin: 60px;
+ justify-content: space-between;
+ margin: 0 auto;
+ width: 100%;
+}
+.hidden-logo {
+ display: none;
+}
+
+
+/* head-menu:hover */
+.sub-menu {
+ display: none;
+}
+
+.company-intro:hover .sub-menu {
+ display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* 헤더로고 포인터 변경 */
+.header-logo img {
+ cursor: pointer;
+}
+
+/* arrow-icon */
+.arrow-icon {
+ background-image: url(/img/icon_arrow_tp.png);
+ color: white;
+}
+
+body {
+ background-color: black;
+}
+
+
+/* hamburger-menu */
+#hamburger-check {
+ display: none;
+}
+#hamburger-check + label {
+ position: relative;
+ display: block;
+ width: 50px;
+ height: 50px;
+ cursor: pointer;
+}
+#hamburger-check + label > span {
+ position: absolute;
+ display: block;
+ width: 100%;
+ height: 5px;
+ background: white;
+ border-radius: 3px;
+ transition: all 300ms;
+}
+#hamburger-check:checked + label > span:nth-child(1) {
+ top: 20%;
+ transform: translate(0, -50%);
+ transform: rotate(45deg);
+}
+#hamburger-check + label > span:nth-child(2) {
+ top: 20%;
+ transform: translate(0, 50%);
+}
+#hamburger-check:checked + label > span:nth-child(2) {
+ opacity: 0;
+}
+#hamburger-check + label > span:nth-child(3) {
+ bottom: 38%;
+}
+#hamburger-check:checked + label > span:nth-child(3) {
+ top: 20%;
+ transform: translate(0, -50%);
+ transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* video-section */
+/* video {
+ object-fit: cover;
+ width: 100%;
+ height: 100%;
+}
+
+.mobile-video {
+ display: none;
+}
+.web-video {
+ display: none;
+} */
+
+
+/* mobile */
+
+/* @media (max-width : 800px) {
+ .mobile-video {
+  display: block;
+ }
+} */
+
+
+/* web */
+/* @media (min-width : 801px) {
+ .web-video {
+  display: block;
+ }
+} */
