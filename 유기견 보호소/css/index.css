@@ -1,0 +1,77 @@
+a {
+ text-decoration: none;
+}
+
+.header-container {
+ margin: 0 auto;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 60px;
+ box-sizing: border-box;
+ height: 100px;
+}
+.header-flex {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.header-title {
+font-size: 32px;
+font-weight: bold;
+/* color: black; */
+}
+.header-navi a {
+ /* color: black; */
+}
+.header-right a {
+ /* color: black; */
+}
+.header-inner-menu {
+ display: none;
+}
+.header-navi {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-left: 32px;
+}
+.header-right {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 32px;
+}
+.notice, .login {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+.notice {
+ margin-right: 48px;
+}
+.menu-title {
+ padding: 0 16px;
+ position: relative;
+}
+
+/* 메뉴창 만들기
+1. 마우스 호버
+2. 숨겨진 메뉴 등장
+3. 숨겨진 메뉴 호버시 텍스트 색상 변경 진한 색 -> 연한 색
+4. 다른 메뉴로 마우스 이동 시 트랜지션 효과 있음
+5. 마우스 호버 전 배경색 동일, 마우스 호버 후 백그라운드 색상 변경 (자바스크립트활용)
+*/
+
+/* 1. 마우스 호버 */
+.menu-title:hover .header-inner-menu {
+ display: block;
+ color: red;
+}
+/* inner-menu 만들기 */
+.header-inner-menu {
+ position: absolute;
+}
+
