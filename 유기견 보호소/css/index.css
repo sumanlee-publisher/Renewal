@@ -1,77 +1,254 @@
+/* Y축 ⬇️⬆️ */
+/* X축 ⬅️➡️ */
+
+/* a tag */
 a {
  text-decoration: none;
+ /* color: black; */
 }
 
+/* body > header-container */
 .header-container {
  margin: 0 auto;
- width: 100%;
+ height: 100px;
+ position: fixed;
  display: flex;
  justify-content: space-between;
- align-items: center;
- padding: 0 60px;
+ width: 100%;
+ padding: 32px;
  box-sizing: border-box;
- height: 100px;
+ align-items: center;
+ z-index: 100;
 }
+
+
+
+
+/* header-container > header-flex  */
 .header-flex {
  display: flex;
  justify-content: space-between;
  align-items: center;
 }
+
+
+/* header-container > header-flex > header-title */
 .header-title {
-font-size: 32px;
-font-weight: bold;
-/* color: black; */
-}
-.header-navi a {
- /* color: black; */
-}
-.header-right a {
- /* color: black; */
-}
-.header-inner-menu {
- display: none;
-}
+ font-size: 32px;
+ font-weight: bold;
+ color: white;
+ }
+
+
+/* header-container > header-flex > div > header-navi */
 .header-navi {
  display: flex;
  justify-content: space-between;
  align-items: center;
- margin-left: 32px;
+ margin-left: 16px;
 }
+
+
+/* header-container > header-flex > div > header-navi > menu-title */
+.menu-title {
+ padding: 26px;
+ position: relative;
+ font-size: 16px;
+ /* color: black; */
+}
+.menu-title:hover .header-inner-menu{
+ display: block;
+ width: 100%;
+ height: 100px;
+ transition-property: height;
+ transition-duration: 1s;
+ transition-timing-function: ease-out;
+}
+.menu-title a {
+ color: white;
+}
+
+
+/* header-container > header-flex > div > header-navi > menu-title > a > header-inner-menu */
+.header-inner-menu {
+ position: absolute;
+ height: 0;
+ width: 100%;
+ overflow: hidden;
+ background-color: white;
+ box-shadow: 45rem 20rem 29rem 0rem rgba(0, 0, 0, 0.23);
+}
+.header-inner-menu li {
+ padding: 12px 0;
+ width: 100%;
+ left: 0;
+ text-align:left;
+ cursor: pointer;
+ border-top: 0;
+ border-left: 0;
+ border-right: 0;
+ border-bottom: 1px solid rgb(225, 225, 225);
+ padding: 8px 0;
+ box-sizing: border-box;
+}
+.header-inner-menu li:hover a {
+ color: rgb(225, 225, 225);
+}
+
+
+/* header-container > header-right */
 .header-right {
  display: flex;
  justify-content: space-between;
  align-items: center;
  padding: 0 32px;
+ font-size: 14px;
 }
+.header-right  a {
+ color: white;
+}
+.text-ff { /* 가상선택자로 해야 하는데 모르겠음..*/
+ color: white;
+}
+
 .notice, .login {
  display: flex;
  justify-content: center;
  align-items: center;
- 
 }
+
+
+/* header-container > header-right > notice */
 .notice {
  margin-right: 48px;
 }
-.menu-title {
- padding: 0 16px;
- position: relative;
+
+/* header-container > header-right > login */
+
+
+/* header.open-menu */
+header.open-menu {
+ width: 100%;
+ background-color: white; /* 색상 화이트 변경*/
+ color: white; /* 검정으로 변경*/
+}
+.open-menu a {
+ color: pink; /*밝은 계열로 변경*/
+}
+.header-container.top-content {
+ /* transform: translateY(-100%); */
+ opacity: 1;
+ transition-property: opacity;
+ transition-duration: .6s;
+ transition-timing-function: ease-out;
 }
 
-/* 메뉴창 만들기
-1. 마우스 호버
-2. 숨겨진 메뉴 등장
-3. 숨겨진 메뉴 호버시 텍스트 색상 변경 진한 색 -> 연한 색
-4. 다른 메뉴로 마우스 이동 시 트랜지션 효과 있음
-5. 마우스 호버 전 배경색 동일, 마우스 호버 후 백그라운드 색상 변경 (자바스크립트활용)
-*/
 
-/* 1. 마우스 호버 */
-.menu-title:hover .header-inner-menu {
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main-container content */
+.main-container {
+ margin: 0 auto;
+ width: 100%;
+}
+.img-container {
+ width: 1600px;
+ height: 900px;
  display: block;
- color: red;
+ background-image: url(/img/girl-5623231_1280.jpg);
+ background-size: cover;
 }
-/* inner-menu 만들기 */
-.header-inner-menu {
+.middle-title {
  position: absolute;
+ color: white;
+ top: 60%;
+ /* left: 1%; */
+ padding: 0 40px;
+ font-size: 21px;
+ /* letter-spacing: 1em;  글자 사이의 간격(자간)*/
+ /* word-spacing: ; 단어 사이의 간격(어간)*/
+ /* line-height: ; 행 사의 간격(행간) */
+ line-height: 1.5em;
+ animation: middle-text 1s ease-out both;
+ animation-delay: 1s;
+}
+.str-text {
+ font-size: 44px;
+ font-weight: 600;
+ position: absolute;
+ top: 70%;
+ /* left: 1%; */
+ color: white;
+ display: block;
+ line-height: 1.4em;
+ padding: 15px 0 30px 40px;
+ animation: big-text 1s ease-out  both;
+ animation-delay: 1.25s;
+}
+.btn {
+ font-size: 16px;
+ position: absolute;
+ top: 90%;
+ /* left: 0%; */
+ /* padding: 0 32px; */
+ margin: 0 42px;
+ width: 130px;
+ height: 40px;
+ border-radius: 20px;
+ text-decoration: none;
+ cursor: pointer;
+ border: none;
+ display: block;
+ background-color: beige;
+ transform: scaleX(1);
+ opacity: 1;
+ box-shadow: 8px 8px 15px rgba(53, 53, 53, 0.9);
+ animation: btn-box 2s ease-out;
+ animation-delay: 1s;
+}
+.btn a {
+ color: black;
+}
+.btn:hover {
+ box-shadow: 8px 8px 15px rgba(53, 53, 53, 0.9);
+ transform: scaleX(1.1);
 }
 
+
+
+/* animation-section */
+@keyframes middle-text {
+ 0% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+@keyframes big-text {
+ 0% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+@keyframes btn-box {
+ 0% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
