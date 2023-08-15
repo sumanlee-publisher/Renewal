@@ -81,3 +81,6 @@ window.addEventListener("scroll", ()=> {
 //  window.scrollTo({top: window.innerHeight, behavior: 'smooth'})
 // }, {passive: false})
 
+// ////////////////////////////////////////////////////////////////////////////////////////////
+ changeImg.classList.add()
+

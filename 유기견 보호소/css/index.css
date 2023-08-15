@@ -299,6 +299,12 @@ header.open-menu {
 
 /* slider > img */
 .change-img {
+<<<<<<< HEAD
+=======
+ top: 0;
+ left: 0;
+ /* width: 1600px; */
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
  height: 100vh;
  display: block;
  background-image: url(/img/girl-5623231_1280.jpg);
@@ -306,7 +312,14 @@ header.open-menu {
  position: relative;
 }
 
+<<<<<<< HEAD
 /* .second-img {
+=======
+}
+
+
+.second-img {
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
  position: absolute;
  top: 50%;
  left: 50%;
@@ -445,6 +458,7 @@ text-content-second
  opacity: 0;
  animation: text-slide 1s ease-out both;
 }
+<<<<<<< HEAD
 @keyframes text-slide {
  0% {
   opacity: 0;
@@ -454,6 +468,35 @@ text-content-second
  }
 }
 
+=======
+
+.sticky-section span:nth-child(2) {
+ font-size: 32px;
+}
+
+.sticky-section span:nth-child(3) {
+ position: absolute;
+ top: 58%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ font-size: 38px;
+ color: black;
+ font-weight: 800;
+}
+
+.curtain {
+ border: 150px solid black;
+ width: 100%;
+ height: 100vh;
+ box-sizing: border-box;
+ border-left: none;
+ border-right: none;
+ position: sticky;
+ top: 0;
+ opacity: .7;
+}
+
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
 /* 스크롤 내려가면서 텍스트 연하게 사라지기 */
 .sticky-container {
  background-color: beige;
@@ -551,9 +594,15 @@ text-content-second
  font-size: 24px;
  padding: 20px 32px;
 }
+<<<<<<< HEAD
 .slide-right.img-right {
  position: absolute;
  width: 15%;
+=======
+
+.slide-right {
+ width: 100%;
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
  height: 30%;
  box-sizing: border-box;
  background-color: black;
@@ -564,6 +613,7 @@ text-content-second
  animation-duration: 10s;
  animation-iteration-count: infinite;
 }
+<<<<<<< HEAD
 @keyframes img-slide-right {
  from {
   transform: translateX(-700%);
@@ -576,6 +626,11 @@ text-content-second
 .slide-left.img-left {
  position: absolute;
  width: 15%;
+=======
+
+.slide-left {
+ width: 100%;
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
  height: 30%;
  box-sizing: border-box;
  background-color: red;
@@ -608,7 +663,11 @@ text-content-second
 }
 
 .another-info {
+<<<<<<< HEAD
  background-color: #FAF3E6;
+=======
+ background-color: green;
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
  width: 100%;
  height: 100vh;
  position: relative;
@@ -618,30 +677,44 @@ text-content-second
  /* justify-content: space-between; */
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
 .another-info-text {
  display: flex;
  flex-direction: column;
  justify-content: space-around;
  padding: 24px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
 .info-text {
  padding: 40px;
  font-size: 32px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
 .another-info-text p:nth-child(n+2) {
  padding: 40px;
  font-weight: 900;
  font-size: 40px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
 /* 추가이미지
 텍스트 슬라이드
 동물을 -> 
 취약계층 ->
 봉사활동 -> */
 
+<<<<<<< HEAD
 .another-info-text p:nth-child(2) {
  transform: translateX(-100%);
  transition: transform 0.5s;
@@ -672,6 +745,17 @@ text-content-second
  /* z-index: 1; */
  background-repeat: no-repeat;
  border-radius: 12px;
+=======
+.another-side-img {
+ position: absolute;
+ background-image: url(/img/3bfd606fe9f1f03dd443389bb6060c8e.jpg);
+ width: 29.6%;
+ height: 100%;
+ top: 10%;
+ left: 70%;
+ z-index: 1;
+ background-repeat: no-repeat;
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
 }
 
 /* 기타 서비스 */
@@ -681,6 +765,7 @@ text-content-second
  width: 100%;
  height: 100vh;
  position: relative;
+<<<<<<< HEAD
  background-color: bisque;
  display: flex;
  justify-content: space-between;
@@ -777,12 +862,87 @@ text-content-second
  /* border: 1px solid black; */
  padding: 0 20px;
  color: darkgray;
+=======
+ /* background-color: blue; */
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border: 1px solid black;
+ box-sizing: border-box;
+}
+.etc-img-section img {
+ /* background-image: url(/img/8482aee174f644178891b2cb0dd70af7_750S.jpg); */
+ width: 40%;
+ height: 78vh;
+ position: absolute;
+ background-repeat: no-repeat;
+ /* object-fit: cover; */
+ top: 10%;
+ left: 5%;
+ display: block;
+}
+.etc-text-content {
+ position: absolute;
+ left: 70%;
+ display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+ align-items: center;
+ padding: 40px;
+ font-size: 32px;
+}
+.etc-text-content p:nth-child(1) {
+ font-weight: 700;
+ font-size: 34px;
+}
+
+.etc-text-content p {
+ padding: 24px;
+ color: black;
+ cursor: pointer;
+}
+.etc-text-content p a {
+ color: black;
+}
+
+.etc-text-content p:hover a {
+ border-bottom: 1px solid red;
+}
+
+ /*  footer */
+
+ .footer-container {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+ }
+
+.footer-title {
+ font-size: 32px;
+ font-weight: 900;
+}
+.footer-title-info, .footer-title-info, .footer-etc-menu, .footer-etc-second-menu  {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 8px;
+ flex-wrap: wrap;
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
 }
 
 .footer-address p:nth-child(6) {
  padding: 16px;
 }
 
+<<<<<<< HEAD
 .footer-end {
  color: darkgray;
 }
+=======
+>>>>>>> 5ccddb30f025d352407d1b368115507df49f7c92
