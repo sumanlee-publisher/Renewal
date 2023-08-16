@@ -82,5 +82,27 @@ window.addEventListener("scroll", ()=> {
 // }, {passive: false})
 
 // ////////////////////////////////////////////////////////////////////////////////////////////
- changeImg.classList.add()
+ // sticky-section
+//  const stickySection = document.getElementsByClassName("sticky-section");
+
+//  console.log(stickySection);
+
+//  let one = 0;
+
+// window.addEventListener("scroll", (e)=> {
+//  console.log(e);
+//  if(window.scrollY >= 100) {
+//   header.classList.add("text");
+//  } else {
+//   header.classList.remove("text");
+//  }
+
+//  if(zero <  window.scrollY) {
+//   header.classList.add("text-hide");
+//  } else {
+//   header.classList.remove("text-hide");
+//  }
+
+//  one = window.scrollY;
+// })
 
