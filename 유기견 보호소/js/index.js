@@ -106,3 +106,5 @@ window.addEventListener("scroll", ()=> {
 //  one = window.scrollY;
 // })
 
+// /////////////////////////////////////
+// scroll
