@@ -9,6 +9,7 @@
  font-weight: normal;
  font-style: normal;
 }
+
 a {
  text-decoration: none;
  /* color: black; */
@@ -127,10 +128,12 @@ header {
 .header-inner-menu li:hover a {
  color: rgb(225, 225, 225);
 }
+
 .header-inner-menu li::after {
  content: "|";
  color: white;
 }
+
 .header-inner-menu li:last-child::after {
  content: "";
 }
@@ -149,31 +152,37 @@ header {
  font-family: 'NanumSquareNeo-Variable';
 }
 
-.notice, .login {
+.notice,
+.login {
  display: flex;
  justify-content: center;
  align-items: center;
  list-style: none;
  padding: 0 15px;
 }
+
 .notice li::after {
  content: "|";
  color: white;
 }
-.notice  li:last-child::after {
+
+.notice li:last-child::after {
  content: "";
 }
+
 .login li::after {
  content: "|";
  color: white;
 }
+
 .login li:last-child::after {
  content: "";
 }
 
 
 /* header-container > header-right > notice */
-.notice, .login {
+.notice,
+.login {
  margin-right: 8px;
  padding: 26px;
  cursor: pointer;
@@ -264,9 +273,12 @@ header.open-menu {
  box-shadow: 8px 8px 15px rgba(53, 53, 53, 0.9);
  transition: all 0.2s linear;
 }
+
 .btn-header a {
  color: black;
+ font-family: 'NanumSquareNeo-Variable';
 }
+
 .btn-main {
  font-size: 16px;
  position: absolute;
@@ -288,7 +300,9 @@ header.open-menu {
  color: black;
  font-family: 'NanumSquareNeo-Variable';
 }
-.btn-main:hover, .btn-header:hover {
+
+.btn-main:hover,
+.btn-header:hover {
  transform: scale(1.1);
 }
 
@@ -382,6 +396,7 @@ text-content-second
  font-weight: 700;
  font-family: 'NanumSquareNeo-Variable';
  text-shadow: 4px 2px 7px #7a7a7a;
+ line-height: 1.3em;
  color: black;
 }
 
@@ -474,14 +489,10 @@ text-content-second
 }
 
 .sticky-section span {
- position: relative;
- top: 50%;
- left: 50%;
- z-index: 1;
- transform: translate(-50%, -50%);
- display: none;
- /* font-family: 'Gowun Batang', serif; */
  font-family: 'NanumSquareNeo-Variable';
+}
+.opacity-text {
+ opacity: 0;
 }
 .sticky-section span:nth-child(1) {
  display: block;
@@ -489,7 +500,6 @@ text-content-second
  animation-fill-mode: both;
  animation-duration: 2s;
  animation-delay: 3s;
- /* animation-iteration-count: infinite; */
  opacity: 0;
  transition: all .5s;
  position: absolute;
@@ -497,14 +507,17 @@ text-content-second
  left: 50%;
  transform: translate(-50%, -50%);
 }
+
 @keyframes sticky-section {
  0% {
   opacity: 0;
  }
+
  100% {
   opacity: 1;
  }
 }
+
 .sticky-section span:nth-child(2) {
  display: block;
  animation-name: sticky-section;
@@ -519,17 +532,21 @@ text-content-second
  left: 50%;
  transform: translate(-50%, -50%);
 }
+
 @keyframes sticky-section {
  0% {
   opacity: 0;
  }
+
  50% {
   opacity: .5;
  }
+
  100% {
   opacity: 1;
  }
 }
+
 .sticky-section span:nth-child(3) {
  display: block;
  animation-name: sticky-section;
@@ -544,20 +561,25 @@ text-content-second
  left: 50%;
  transform: translate(-50%, -50%);
 }
+
 @keyframes sticky-section {
  0% {
   opacity: 0;
  }
+
  25% {
   opacity: .5;
  }
+
  50% {
   opacity: .5;
  }
+
  100% {
   opacity: 1;
  }
 }
+
 .sticky-section span:nth-child(4) {
  display: block;
  animation-name: sticky-section;
@@ -572,33 +594,39 @@ text-content-second
  left: 50%;
  transform: translate(-50%, -50%);
 }
+
 @keyframes sticky-section {
  0% {
   opacity: 0;
  }
+
  25% {
   opacity: .25;
  }
+
  50% {
   opacity: .5;
  }
+
  75% {
   opacity: .75;
  }
+
  100% {
   opacity: 1;
  }
 }
 
 
-/* 스크롤 내려가면서 텍스트 연하게 사라지기 */
+/* sticky-container */
 .sticky-container {
  background-color: beige;
  width: 100%;
- height: 100vh;
+ height: 200vh;
  display: flex;
  justify-content: space-between;
- position: relative;
+ position: sticky;
+ top: 0;
  overflow: hidden;
  font-family: 'Nanum Gothic', sans-serif;
 }
@@ -606,17 +634,19 @@ text-content-second
 .dog-img-container img {
  width: 100%;
  height: 100vh;
- position: sticky;
- top: 0;
+ /* position: sticky; */
+ /* top: 0; */
  object-fit: cover;
  object-position: 70%;
- /* object 속성 활용하기 */
 }
 
 .text-content {
  display: flex;
  flex-wrap: wrap;
  padding: 100px;
+ height: 100vh;
+ justify-content: flex-start;
+ align-items: baseline;
 }
 
 .sticky-title {
@@ -625,6 +655,7 @@ text-content-second
  font-size: 24px;
  font-family: 'NanumSquareNeo-Variable';
 }
+
 .sticky-text {
  line-height: 2em;
  font-family: 'NanumSquareNeo-Variable';
@@ -667,9 +698,11 @@ text-content-second
  transition: all 0.2s linear;
  font-family: 'NanumSquareNeo-Variable';
 }
+
 .btn-right a {
  color: black;
 }
+
 .btn-right:hover {
  transform: scale(1.1);
 }
@@ -683,7 +716,6 @@ text-content-second
  height: 100vh;
  background-color: rgb(237, 237, 211);
  position: relative;
- /* opacity: .2; */
  box-sizing: border-box;
  overflow: hidden;
  font-family: 'NanumSquareNeo-Variable';
@@ -700,32 +732,65 @@ text-content-second
  padding: 20px 32px;
  font-family: 'NanumSquareNeo-Variable';
 }
-.slide-img  img {
+
+.slide-img img {
  transition: all .5s linear;
 }
+
 .slide-img img:hover {
  transform: scale(1.1);
- 
+ animation-play-state: paused;
+
 }
+
 .slide-img {
  display: flex;
  justify-content: center;
+ flex-wrap: nowrap;
+ height: 100%;
  align-items: center;
  cursor: pointer;
+ width: 4800px;
+ animation: slide-img 18s linear infinite both;
 }
-.slide-img.top img {
+@keyframes slide-img {
+ 0% { transform: translateX(0);}
+ 99.9% { transform: translateX(-49%);}
+ 100% { transform: translateX(-50%);}
+}
+.slide-img:hover {
+ animation-play-state: paused;
+}
+.slide-img.bottom {
+ display: flex;
+ justify-content: center;
+ flex-wrap: nowrap;
+ height: 100%;
+ align-items: center;
+ cursor: pointer;
+ width: 4800px;
+ animation: slide-img-bottom 22s linear infinite both;
+}
+@keyframes slide-img-bottom {
+ 0% { transform: translateX(0);}
+ 99.9% { transform: translateX(-49%);}
+ 100% { transform: translateX(-50%);}
+}
+.slide-img.bottom:hover {
+ animation-play-state: paused;
+}
+
+.slide-img img {
  width: 300px;
  height: 300px;
  padding: 12px;
 }
+
 .slide-img.bottom img {
  width: 300px;
  height: 300px;
  padding: 12px;
 }
-
-
-
 /* .btn-center {
  position: absolute;
  z-index: 1;
@@ -745,6 +810,7 @@ text-content-second
  color: black;
  font-family: 'NanumSquareNeo-Variable';
 }
+
 .btn-center:hover {
  transform: scale(1.1);
 }
@@ -821,14 +887,16 @@ text-content-second
 이미지 링크걸기 */
 .etc-container {
  width: 100%;
- height: 100vh; 
- background-color: beige;
+ height: 100vh;
+ /* background-color: beige; */
+ background-color: pink;
  display: flex;
  justify-content: space-between;
  align-items: center;
  position: relative;
  overflow: hidden;
 }
+
 .etc-text-content {
  position: absolute;
  top: 10%;
@@ -840,6 +908,7 @@ text-content-second
  padding-left: 40px;
  /* overflow: hidden; */
 }
+
 .font-h1 {
  font-weight: 900;
  font-size: 52px;
@@ -847,6 +916,7 @@ text-content-second
  line-height: 1.3em;
  font-family: 'NanumSquareNeo-Variable';
 }
+
 .font-h1:nth-child(2) {
  color: rgb(100, 100, 100);
 }
@@ -858,12 +928,13 @@ text-content-second
 }
 
 .margin-content {
- margin: 0 250px 250px 0;
+ margin: 0 10px 100px 150px;
  display: flex;
  justify-content: space-between;
  align-items: flex-start;
  flex-direction: column;
 }
+
 .flex-wrap-box {
  display: flex;
  align-items: center;
@@ -871,8 +942,9 @@ text-content-second
  flex-direction: column;
  padding: 32px;
  /* display: none; */
-
+ margin-left: 150px;
 }
+
 .name-content {
  padding: 35px 0;
  font-size: 24px;
@@ -880,16 +952,19 @@ text-content-second
  color: black;
  font-family: 'NanumSquareNeo-Variable';
 }
+
 .img-box img {
- width: 300px;
- height: 300px;
+ width: 420px;
+ height: 420px;
  border-radius: 20%;
  transition: all 0.2s linear;
 }
+
 .img-box img:hover {
  transform: scale(1.1);
  overflow: hidden;
 }
+
 .btn-section {
  cursor: pointer;
  border: none;
@@ -901,12 +976,15 @@ text-content-second
  font-size: 16px;
  transition: all 0.2s linear;
 }
+
 .btn-section a {
  color: black;
 }
-.btn-section:hover  {
+
+.btn-section:hover {
  transform: scale(1.1);
 }
+
 /*  footer */
 #footer {
  background-color: gray;
@@ -940,7 +1018,7 @@ text-content-second
 }
 
 .footer-text-container {
- 
+
  display: flex;
  justify-content: space-between;
  flex-wrap: wrap;
@@ -960,6 +1038,7 @@ text-content-second
 .footer-address p:nth-child(6) {
  padding: 16px;
 }
+
 .footer-end {
  color: darkgray;
  font-size: 13px;
