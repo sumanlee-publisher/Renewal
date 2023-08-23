@@ -108,9 +108,3 @@ window.addEventListener("scroll", ()=> {
 
 // /////////////////////////////////////
 // scroll
-const 
-
-
-window.addEventListener('scroll', ()=> {
-    // console.log(window.scrollTo(0, 1500));
-})
