@@ -460,7 +460,6 @@ header.open-menu {
  object-position: 100%;
  z-index: 1;
 }
-
 .sticky-section span {
  font-family: 'NanumSquareNeo-Variable';
 }
@@ -469,20 +468,12 @@ header.open-menu {
 
 .sticky-section span:nth-child(1) {
  display: block;
- /* animation-name: sticky-section;
- animation-fill-mode: both;
- animation-duration: 2s;
- animation-delay: 3s; 
- opacity: 0;*/
  transition: all .5s;
  position: absolute;
  top: 10%;
  left: 50%;
  transform: translate(-50%, -50%);
- /* display: none; */
 }
-
-
 .sticky-section span:nth-child(2) {
  display: block;
  /* animation-name: sticky-section;
@@ -538,15 +529,12 @@ header.open-menu {
 .sticky-container {
  display: flex;
  justify-content: space-between;
- /* flex-direction: row-reverse; */
  background-color: beige;
  height: 100%;
  position: relative;
  top: 0;
  font-family: 'NanumSquareNeo-Variable';
  z-index: 3;
- /* width: 100%; */
- /* overflow: hidden; */
 }
 .sticky-img {
  position: sticky;
@@ -563,26 +551,20 @@ header.open-menu {
 }
 
 .sticky-header-name {
-<<<<<<< Updated upstream
- padding-bottom: 50%;
-=======
  padding-top: 12px;
- padding-bottom: 130px;
->>>>>>> Stashed changes
+ padding-bottom: 20%;
  font-size: 32px;
  font-weight: 600;
+ line-height: 1.5em;
 }
 
 .sticky-list {
  line-height: 2em;
-<<<<<<< Updated upstream
  padding-bottom: 80%;
  display: flex;
  justify-content: space-between;
- /* align-items: center; */
  flex-direction: column;
-=======
- padding-bottom: 40%;
+ padding-bottom: 100%;
  position: sticky;
  top: 0;
  display: flex;
@@ -596,7 +578,6 @@ header.open-menu {
  border-radius: 20px;
  /* object-fit: 50%; */
  /* background-size: cover; */
->>>>>>> Stashed changes
 }
 
 

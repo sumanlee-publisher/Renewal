@@ -63,8 +63,9 @@ const stickySection = document.getElementsByClassName("sticky-section");
 let opacityText = document.getElementsByClassName("opacity-text");
 window.addEventListener('scroll', ()=>{
  console.log(stickySection[0].getBoundingClientRect().top);
+ 
 })
-
-for(let i = 0; i < stickySection[0].getBoundingClientRect().top; i++) {
- if()
-}
+let winH = window.innerHeight;
+let scrollY = window.scrollY;
+let posFromTop = stickySection[0].getBoundingClientRect().top;
+let absolutePos = scrollY + posFromTop;
