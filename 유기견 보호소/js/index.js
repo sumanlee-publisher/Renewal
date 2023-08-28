@@ -48,63 +48,23 @@ window.addEventListener("scroll", ()=> {
 
 
 
-// window.addEventListener('scroll', ()=> {
-//  for(let i = 0; i < header.length; i++) {
-//   console.log(header[i].getBoundingClientRect().top-window.innerHeight < 0);
-//  }
-//  if(window.scrollY <= 100) {
-//   header.classList.add('top-content');
-//  } else {
-//   header.classList.remove('top-content');
-//  }
-// })
-
-
-// img-change
-//condition
-
-// img-container opacity 0; 
-// middle-title, str-text opacity 0;
-// second-img opacity 1;
-// middle-title, str-text opacity 1;
-
-// if (imgContainer === true) {
-//  imgContainer.classList.add(".add-img");
-// } else {
-//  imgContainer.classList.remove(".add-img");
-// }
-// 마지막으로 setTimeout() 함수와 setInterval() 함수를 사용한 후에는 반드시 clearTimeout() 함수와 clearInterval() 함수를 사용해서 타이머를 청소해주는 습관을 들이시라고 말씀드리고 싶습니다. 특히, SPA(Single Page Application)을 개발할 때는 이 부분이 메모리 누수(memory leak)로 이어질 수 있기 때문에 각별히 주의가 필요합니다.
-// const 변수 = [document.getElementsByClassName("클래스1"), document.getElementsByClassName("클래스2")];
-
-// window.addEventListener('scroll', (e)=> {
-//  e.preventDefault();
-//  window.scrollTo({top: window.innerHeight, behavior: 'smooth'})
-// }, {passive: false})
-
-// ////////////////////////////////////////////////////////////////////////////////////////////
- // sticky-section
-//  const stickySection = document.getElementsByClassName("sticky-section");
-
-//  console.log(stickySection);
-
-//  let one = 0;
-
-// window.addEventListener("scroll", (e)=> {
-//  console.log(e);
-//  if(window.scrollY >= 100) {
-//   header.classList.add("text");
-//  } else {
-//   header.classList.remove("text");
-//  }
-
-//  if(zero <  window.scrollY) {
-//   header.classList.add("text-hide");
-//  } else {
-//   header.classList.remove("text-hide");
-//  }
-
-//  one = window.scrollY;
-// })
-
-// /////////////////////////////////////
 // scroll
+const contentContainerWrapper = document.getElementsByClassName('content-container-wrapper');
+window.addEventListener('scroll', ()=> {
+ console.log(contentContainerWrapper[0].getBoundingClientRect().top);
+ if (contentContainerWrapper[0].getBoundingClientRect().top - window.scrollY/2< 0 ) {
+  contentContainerWrapper[0].classList.add("active");
+ } else {
+  contentContainerWrapper[0].classList.remove("active");
+ }
+})
+
+const stickySection = document.getElementsByClassName("sticky-section");
+let opacityText = document.getElementsByClassName("opacity-text");
+window.addEventListener('scroll', ()=>{
+ console.log(stickySection[0].getBoundingClientRect().top);
+})
+
+for(let i = 0; i < stickySection[0].getBoundingClientRect().top; i++) {
+ if()
+}
