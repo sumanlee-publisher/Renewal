@@ -563,18 +563,40 @@ header.open-menu {
 }
 
 .sticky-header-name {
+<<<<<<< Updated upstream
  padding-bottom: 50%;
+=======
+ padding-top: 12px;
+ padding-bottom: 130px;
+>>>>>>> Stashed changes
  font-size: 32px;
  font-weight: 600;
 }
 
 .sticky-list {
  line-height: 2em;
+<<<<<<< Updated upstream
  padding-bottom: 80%;
  display: flex;
  justify-content: space-between;
  /* align-items: center; */
  flex-direction: column;
+=======
+ padding-bottom: 40%;
+ position: sticky;
+ top: 0;
+ display: flex;
+}
+.sticky-list img {
+ position: sticky;
+ display: block;
+ width: 50%;
+ top: -50%;
+ left: 0;
+ border-radius: 20px;
+ /* object-fit: 50%; */
+ /* background-size: cover; */
+>>>>>>> Stashed changes
 }
 
 
