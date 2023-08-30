@@ -9,14 +9,12 @@
  font-weight: normal;
  font-style: normal;
 }
-
 @font-face {
  font-family: 'GmarketSansMedium';
  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
  font-weight: normal;
  font-style: normal;
 }
-
 a {
  text-decoration: none;
  /* color: black; */
@@ -29,8 +27,8 @@ a {
 }
 
 body {
- width: calc(1920px - (100vw - 100%));
- overflow-x: hidden;
+ /* width: calc(1920px - (100vw - 100%)); */
+ /* overflow-x: hidden; */
 }
 
 /* body > header-container */
@@ -69,7 +67,7 @@ header {
 .header-title {
  font-size: 32px;
  font-weight: bold;
- color: white;
+ color: black;
  font-family: 'NanumSquareNeo-Variable';
 }
 
@@ -98,7 +96,7 @@ header {
 }
 
 .menu-title a {
- color: white;
+ color: black;
  font-family: 'NanumSquareNeo-Variable';
 }
 
@@ -109,7 +107,7 @@ header {
  height: 0;
  width: 130%;
  overflow: hidden;
- background-color: white;
+ /* background-color: darkgray; */
  margin-top: 18px;
  left: 7px;
  box-shadow: 1rem 1rem 30rem 0rem rgba(95, 95, 95, 0.5);
@@ -117,7 +115,6 @@ header {
 }
 
 .header-inner-menu li {
-
  display: flex;
  justify-content: center;
  padding: 8px 0;
@@ -154,7 +151,7 @@ header {
 }
 
 .header-right a {
- color: white;
+ color: gray;
  font-family: 'NanumSquareNeo-Variable';
 }
 
@@ -207,7 +204,7 @@ header.open-menu {
 }
 
 .open-menu a {
- color: pink;
+ color: black;
  /*밝은 계열로 변경*/
 }
 
@@ -219,51 +216,49 @@ header.open-menu {
  transition-timing-function: ease-out;
 } */
 
+/* header 끝 */
+/* header 끝 */
+/* header 끝 */
+/* header 끝 */
 
-/* main-container content */
 
-.str-text:nth-child(3) {
- display: none;
+/* section-main */
+.section-main-container {
+ font-family: 'NanumSquareNeo-Variable';
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
 }
-
-
-.middle-title {
- position: absolute;
- color: white;
- top: 40%;
- /* left: 1%; */
+.renewal-title {
  padding: 0 40px;
  font-size: 21px;
- /* letter-spacing: 1em;  글자 사이의 간격(자간)*/
- /* word-spacing: ; 단어 사이의 간격(어간)*/
- /* line-height: ; 행 사의 간격(행간) */
  line-height: 1.5em;
- animation: middle-text 1s ease-out both;
+ animation: middle-text 1s linear both;
  animation-delay: 1s;
- font-family: 'Nanum Gothic', sans-serif;
- z-index: 1;
 }
 
-.str-text {
- font-size: 44px;
+.bold-text {
+ font-size: 42px;
  font-weight: 600;
- position: absolute;
  top: 50%;
- /* left: 1%; */
- color: white;
- display: block;
  line-height: 1.4em;
- padding: 15px 0 30px 40px;
+ padding: 15px 0 20px 40px;
  animation: big-text 1s ease-out both;
  animation-delay: 1.25s;
- font-family: 'NanumSquareNeo-Variable';
- z-index: 1;
+}
+.renewal-content {
+ font-size: 16px;
+ font-weight: 600;
+ line-height: 1.5em;
+ animation: big-text 1s ease-out both;
+ animation-delay: 1.75s;
+ padding: 0 0 30px 40px;
 }
 
 .btn-header {
  font-size: 16px;
- position: absolute;
- top: 70%;
  margin: 0 42px;
  width: 130px;
  height: 40px;
@@ -272,7 +267,7 @@ header.open-menu {
  cursor: pointer;
  border: none;
  display: block;
- background-color: beige;
+ /* background-color: beige; */
  opacity: 1;
  box-shadow: 8px 8px 15px rgba(53, 53, 53, 0.9);
  transition: all 0.3s linear;
@@ -359,19 +354,22 @@ header.open-menu {
  }
 }
 
-/* slider > img */
-.change-img {
- width: calc(1920px - (100vw - 100%));
+.section-main {
  height: 100vh;
- display: block;
- background-image: url(/img/girl-5623231_1280.jpg);
- background-size: cover;
- position: fixed;
- top: 0;
- z-index: 1;
+ width: calc(1920px - (100vw - 100%));
 }
+.main-image-content {
+ height: auto;
+ /* background-repeat: no-repeat; */
+ /* background-size: cover; */
+ position: absolute;
+}
+.main-image img {
+ width: 100%;
+ height: 100%;
+ background-size: cover;
 
-
+}
 /* section > content-wrapper */
 .content-container-wrapper.active {
  width: 100%;
@@ -494,13 +492,19 @@ header.open-menu {
 
 /* sticky-container */
 .sticky-container {
- display: flex;
- justify-content: space-between;
- background-color: beige;
- height: 100%;
+ width: 100%;
+ height: 4000px;
  position: relative;
  font-family: 'NanumSquareNeo-Variable';
  z-index: 1;
+}
+.real-sticky-container {
+ height: 100vh;
+ position: sticky;
+ top: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 .sticky-img-container {
  position: sticky;
@@ -950,3 +954,6 @@ header.open-menu {
 
 /* 1920px - calc( 100vw - 100% )
  */
+/* letter-spacing: 1em;  글자 사이의 간격(자간)*/
+ /* word-spacing: ; 단어 사이의 간격(어간)*/
+ /* line-height: ; 행 사의 간격(행간) */
