@@ -26,6 +26,9 @@ function removeActive() {
 //스크롤
 //transform = translateY(-100%); 숨는다
 //////////////////////////////////////////////////
+//scrollTo
+// window.scrollTo({top: 300 b})
+
 
 // 스크롤시 메뉴창 사라짐
 let zero = 0;
@@ -48,10 +51,10 @@ window.addEventListener("scroll", ()=> {
 
 
 
-// scroll
+// scroll width: 100%;
 const contentContainerWrapper = document.getElementsByClassName('content-container-wrapper');
 window.addEventListener('scroll', ()=> {
- console.log(contentContainerWrapper[0].getBoundingClientRect().top);
+ // console.log(contentContainerWrapper[0].getBoundingClientRect().top);
  if (contentContainerWrapper[0].getBoundingClientRect().top - window.scrollY/2< 0 ) {
   contentContainerWrapper[0].classList.add("active");
  } else {
@@ -59,13 +62,23 @@ window.addEventListener('scroll', ()=> {
  }
 })
 
+//sticky-section
 const stickySection = document.getElementsByClassName("sticky-section");
 let opacityText = document.getElementsByClassName("opacity-text");
+
+const stickyInitPos = stickySection[0].getBoundingClientRect().top + window.scrollY;
 window.addEventListener('scroll', ()=>{
- console.log(stickySection[0].getBoundingClientRect().top);
  
+ 
+ for(let i = 0; i < opacityText.length; i++) {
+  console.log(stickySection[0].getBoundingClientRect().top < -500-(i*700));
+  if(stickySection[0].getBoundingClientRect().top < -500-(i*500)){
+   opacityText[i].classList.add('active');
+  }else{
+   opacityText[i].classList.remove('active')
+  }
+ }
 })
-let winH = window.innerHeight;
-let scrollY = window.scrollY;
-let posFromTop = stickySection[0].getBoundingClientRect().top;
-let absolutePos = scrollY + posFromTop;
+
+
+//
