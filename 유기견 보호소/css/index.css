@@ -529,30 +529,26 @@ header.open-menu {
 .adoption-container {
  width: 100%;
  height: 100vh;
- position: relative;
- top: 0;
- left: 0;
  box-sizing: border-box;
  overflow: hidden;
  font-family: 'NanumSquareNeo-Variable';
- z-index: 1;
  background-color: #d0fffb;
+}
+.adoption-container::after {
+ content: '';
+ background-color: black;
+ width: 50%;
 }
 
 .adoption-container h1 {
- font-size: 38px;
+ font-size: 32px;
  padding: 20px 32px;
  font-weight: 700;
 }
 
 .adoption-container p {
  font-size: 24px;
- padding: 20px 32px;
- font-family: 'NanumSquareNeo-Variable';
-}
-
-.slide-wrapper {
- 
+ padding: 15px 32px;
 }
 
 .slide-img img {
@@ -583,11 +579,6 @@ header.open-menu {
  0% {
   transform: translateX(0);
  }
-
- 99.9% {
-  transform: translateX(-49%);
- }
-
  100% {
   transform: translateX(-50%);
  }

@@ -68,10 +68,8 @@ let opacityText = document.getElementsByClassName("opacity-text");
 
 const stickyInitPos = stickySection[0].getBoundingClientRect().top + window.scrollY;
 window.addEventListener('scroll', ()=>{
- 
- 
  for(let i = 0; i < opacityText.length; i++) {
-  console.log(stickySection[0].getBoundingClientRect().top < -500-(i*700));
+  // console.log(stickySection[0].getBoundingClientRect().top < -500-(i*700));
   if(stickySection[0].getBoundingClientRect().top < -500-(i*500)){
    opacityText[i].classList.add('active');
   }else{
@@ -80,5 +78,8 @@ window.addEventListener('scroll', ()=>{
  }
 })
 
-
 //
+const stickyImageContainer = document.querySelectorAll(".sticky-image-container");
+const textContent = document.getElementsByClassName("text-content");
+
+console.log(stickyImageContainer.getBoundingClientRect().top);
