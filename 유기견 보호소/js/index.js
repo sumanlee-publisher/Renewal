@@ -62,8 +62,8 @@ window.addEventListener('scroll', ()=> {
  }
 })
 
-//sticky-section
-const stickySection = document.getElementsByClassName("sticky-section");
+//section-scroll-content
+const stickySection = document.getElementsByClassName("section-scroll-content");
 let opacityText = document.getElementsByClassName("opacity-text");
 
 const stickyInitPos = stickySection[0].getBoundingClientRect().top + window.scrollY;
