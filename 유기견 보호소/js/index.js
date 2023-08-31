@@ -52,7 +52,7 @@ window.addEventListener("scroll", ()=> {
 
 
 // scroll width: 100%;
-const contentContainerWrapper = document.getElementsByClassName('content-container-wrapper');
+const contentContainerWrapper = document.getElementsByClassName('section-content');
 window.addEventListener('scroll', ()=> {
  // console.log(contentContainerWrapper[0].getBoundingClientRect().top);
  if (contentContainerWrapper[0].getBoundingClientRect().top - window.scrollY/2< 0 ) {
