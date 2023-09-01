@@ -78,8 +78,22 @@ window.addEventListener('scroll', ()=>{
  }
 })
 
-//
-const stickyImageContainer = document.querySelectorAll(".sticky-image-container");
-const textContent = document.getElementsByClassName("text-content");
+/////////////////////////////////////////////////////
 
-console.log(stickyImageContainer.getBoundingClientRect().top);
+const stickyList = document.querySelectorAll(".sticky-list");
+const stickysPadding = 400;
+const stickyImg = document.querySelectorAll(".sticky-img");
+
+
+window.addEventListener('scroll', ()=> {
+ for(let i = 0; i < stickyList.length ; i++){
+  console.log(`${i+1} = ${stickyList[i].getBoundingClientRect().top - window.innerHeight + stickysPadding}`);
+
+  if(stickyList[i].getBoundingClientRect().top - window.innerHeight + stickysPadding < 0 ) {
+   // 사진 나타나게하기
+   stickyImg[i].classList.add("active")
+  } else {
+   stickyImg[i].classList.remove("active")
+  }
+ }
+})
