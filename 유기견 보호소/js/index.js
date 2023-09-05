@@ -188,3 +188,28 @@ slides.addEventListener('mouseenter', function() {
 slides.addEventListener('mouseleave', function() {
  autoSlide();
 })
+
+// etc-container row-scroll-slider
+
+// etc-container ->> slider-conainer
+// ul.etc-image-container ->> slider
+// li.flex-wrap-box ->> slide
+const slider = document.querySelector('.etc-image-container');
+const sliderWidth = document.querySelector('.flex-wrap-box');
+let scrollLeft = 0;
+
+// 스크롤 이벤트 리스너
+window.addEventListener('wheel', (event)=> {
+ if(event.deltaY > 0) {
+ //아래로 스크롤할 때 다음 슬라이드로 이동
+  scrollLeft +=sliderWidth;
+ } else {
+ //위로 스크롤할 때 이전 슬라이드로 이동
+  scrollLeft +=sliderWidth;
+ }
+ //스크롤 범위를 슬라이더의 가로 너비로 제한
+ scrollLeft = Math.min(Math.max(scrollLeft, 0), (slider.children.length - 1) * sliderWidth);
+ //슬라이더를 이동
+ slider.style.transform = `translateX(-${scrollLeft}px)`;
+
+})
